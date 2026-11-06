@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive multiple-choice quiz website.">
+  <title>QuickQuiz | Test Your Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="QuickQuiz home"><span class="brand-mark">Q</span> QuickQuiz</a>
+      <span class="top-label">KNOWLEDGE CHECK</span>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="eyebrow"><span class="dot"></span> MINI CHALLENGE</div>
+      <h1>Put your knowledge<br><span>to the test.</span></h1>
+      <p>Answer 5 questions and see how well you score. Choose one answer for each question.</p>
+      <div class="stats">
+        <div><strong>05</strong><span>Questions</span></div>
+        <div><strong>4</strong><span>Options each</span></div>
+        <div><strong>1</strong><span>Correct answer</span></div>
+      </div>
+      <button class="primary-btn start-btn" id="startBtn">Start the quiz <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="quiz-card hidden" id="quizSection" aria-labelledby="questionTitle">
+      <div class="quiz-head">
+        <div><span class="eyebrow">YOUR QUIZ</span><h2>General Knowledge</h2></div>
+        <div class="question-count" id="questionCount">QUESTION 1 / 5</div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <form id="quizForm">
+        <div id="questionsContainer"></div>
+        <div class="quiz-footer">
+          <span id="answeredCount">0 of 5 answered</span>
+          <button type="button" class="primary-btn" id="submitBtn">Submit answers <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="result-card hidden" id="resultSection" aria-live="polite">
+      <div class="result-icon" id="resultIcon">✓</div>
+      <p class="eyebrow">QUIZ COMPLETED</p>
+      <h2 id="resultHeading">Well done!</h2>
+      <p class="result-copy" id="resultCopy">Here is how you did.</p>
+      <div class="score-ring"><div><strong id="scoreValue">0/5</strong><span>YOUR SCORE</span></div></div>
+      <div class="result-stats">
+        <div><strong id="correctValue">0</strong><span>Correct</span></div>
+        <div><strong id="incorrectValue">0</strong><span>Incorrect</span></div>
+        <div><strong id="percentValue">0%</strong><span>Score</span></div>
+      </div>
+      <div id="reviewList" class="review-list"></div>
+      <button class="primary-btn restart-btn" id="restartBtn">Try again <span aria-hidden="true">↻</span></button>
+    </section>
+    <footer>Made for curious minds <span>·</span> QuickQuiz</footer>
+  </main>
+</body>
+</html>
